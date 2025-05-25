@@ -1,0 +1,37 @@
+From dc9d8785b7b2c1ee8eb0b7836dd2d1cf3f3a4f49 Mon Sep 17 00:00:00 2001
+From: Saalim Quadri <danascape@gmail.com>
+Date: Sun, 25 May 2025 18:35:45 +0530
+Subject: [PATCH] Inherit danascape drivers
+
+This patch adds support for my driver tests and work
+
+Signed-off-by: Saalim Quadri <danascape@gmail.com>
+---
+ drivers/Kconfig  | 2 ++
+ drivers/Makefile | 2 ++
+ 2 files changed, 4 insertions(+)
+
+diff --git a/drivers/Kconfig b/drivers/Kconfig
+index 7c556c5ac4fd..0146583bcd5d 100644
+--- a/drivers/Kconfig
++++ b/drivers/Kconfig
+@@ -247,4 +247,6 @@ source "drivers/cdx/Kconfig"
+ 
+ source "drivers/dpll/Kconfig"
+ 
++source "drivers/danascape/Kconfig"
++
+ endmenu
+diff --git a/drivers/Makefile b/drivers/Makefile
+index b5749cf67044..b055123b7b5c 100644
+--- a/drivers/Makefile
++++ b/drivers/Makefile
+@@ -196,3 +196,5 @@ obj-$(CONFIG_CDX_BUS)		+= cdx/
+ obj-$(CONFIG_DPLL)		+= dpll/
+ 
+ obj-$(CONFIG_S390)		+= s390/
++
++obj-m += danascape/
+-- 
+2.34.1
+
